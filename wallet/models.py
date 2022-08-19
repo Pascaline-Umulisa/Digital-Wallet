@@ -70,7 +70,7 @@ class Receipt(models.Model):
     receipt_type= models.CharField(max_length = 20)
     date = models.DateTimeField()
     receipt_number= models.IntegerField()
-    amount= models.IntegerField()
+    number= models.IntegerField()
     transaction = models.ForeignKey("Transaction",on_delete=models.CASCADE,related_name='Thirdparty_transaction')
     receipt_file = models.FileField()
 
@@ -82,7 +82,7 @@ class Loan(models.Model):
     guaranter = models.CharField(max_length=20)
     issuer = models.CharField(max_length=20)
     wallet = models.ForeignKey("Wallet",on_delete=models.CASCADE,related_name='Loan_wallet')
-    
+
 class Reward(models.Model):
     transaction= models.ForeignKey("Transaction",on_delete=models.CASCADE,related_name='Reward_transaction')
     recipient = models.ForeignKey("Customer",on_delete=models.CASCADE,related_name='Reward_recipient')

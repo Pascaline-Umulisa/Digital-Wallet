@@ -1,57 +1,58 @@
 from django.contrib import admin
 # Register your models here.
 from .models import Account, Card, Customer,Currency, Loan, Notification, Receipt, Reward, ThirdParty, Transaction, Wallet
-admin. site.register(Customer)
-class Customer(admin.ModelAdmin):
+
+class CustomerAdmin(admin.ModelAdmin):
     list_display = ('first_name', 'last_name', 'age', 'email')
     search_fields = ('first_name', 'last_name')
+admin. site.register(Customer,CustomerAdmin)
     
-admin.site.register(Account)
-class Account(admin.ModelAdmin):
-    list_display = ('account_name', 'account_number', 'amount')
+class AccountAdmin(admin.ModelAdmin):
+    list_display = ('account_name', 'account_number', 'account_balance')
     search_fields = ('account_name', 'account_number')
+admin.site.register(Account,AccountAdmin)
     
-admin.site.register(Wallet)
-class Wallet(admin.ModelAdmin): 
+class WalletAdmin(admin.ModelAdmin): 
     list_display = ('customer', 'status', 'amount')
     search_fields = ('customer', 'status')
+admin.site.register(Wallet,WalletAdmin)
     
-admin.site.register(Transaction)
-class Transaction(admin.ModelAdmin):
-    list_display = ('type', 'description', 'amount')
-    search_fields = ('type', 'description')
+class TransactionAdmin(admin.ModelAdmin):
+    list_display = ('transaction_type', 'transaction_description', 'transaction_amount')
+    search_fields = ('transaction_type', 'transaction_description')
+admin.site.register(Transaction,TransactionAdmin)
     
-admin.site.register(Card)
-class Card(admin.ModelAdmin):   
-    list_display = ('type', 'number', 'issuer')
-    search_fields = ('type', 'number', 'issuer')
+class CardAdmin(admin.ModelAdmin):   
+    list_display = ('card_type', 'card_number', 'issuer')
+    search_fields = ('card_type', 'card_number', 'issuer')
+admin.site.register(Card,CardAdmin)
     
-admin.site.register(ThirdParty)
-class ThirdParty(admin.ModelAdmin): 
-    list_display = ('wallet', 'issuer', 'amount')
-    search_fields = ('wallet', 'issuer', 'amount')
+class ThirdPartyAdmin(admin.ModelAdmin): 
+    list_display = ('wallet', 'issuer', 'transaction_amount')
+    search_fields = ('wallet', 'issuer', 'transaction_amount')
+admin.site.register(ThirdParty,ThirdPartyAdmin)
     
-admin.site.register(Notification)
-class Notification(admin.ModelAdmin):
+class NotificationAdmin(admin.ModelAdmin):
     list_display = ('message', 'date', 'title')
     search_fields = ('message', 'date', 'title')
+admin.site.register(Notification,NotificationAdmin)
     
-admin.site.register(Receipt)
-class Receipt(admin.ModelAdmin):
-    list_display = ('date', 'type', 'number')
-    search_fields = ('date', 'type', 'number')
+class ReceiptAdmin(admin.ModelAdmin):
+    list_display = ('date', 'receipt_type', 'number')
+    search_fields = ('date', 'receipt_type', 'number')
+admin.site.register(Receipt,ReceiptAdmin)
     
-admin.site.register(Loan)
-class Loan(admin.ModelAdmin):
-    list_display = ('type', 'guaranter', 'issuer')
-    search_fields = ('type', 'guaranter', 'issuer')
+class LoanAdmin(admin.ModelAdmin):
+    list_display = ('loan_type', 'guaranter', 'issuer')
+    search_fields = ('loan_type', 'guaranter', 'issuer')
+admin.site.register(Loan,LoanAdmin)
     
-admin.site.register(Reward)
-class Reward(admin.ModelAdmin):
-    list_display = ('transaction', 'recepient', 'points')
-    search_fields = ('transaction', 'recepient', 'points')
+class RewardAdmin(admin.ModelAdmin):
+    list_display = ('transaction', 'recipient', 'points')
+    search_fields = ('transaction', 'recipient', 'points')
+admin.site.register(Reward,RewardAdmin)
     
-admin.site.register(Currency)
-class Currency(admin.ModelAdmin):
+class CurrencyAdmin(admin.ModelAdmin):
     list_display = ('country', 'symbol', 'amount')
     search_fields = ('country', 'symbol', 'amount')
+admin.site.register(Currency,CurrencyAdmin)
