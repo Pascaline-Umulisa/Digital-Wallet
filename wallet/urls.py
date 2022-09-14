@@ -13,25 +13,25 @@ path("registercard/", register_card, name="card"),
 path("cards/", views.list_card, name="cards"),
 
 path("registercurrency/", register_currency, name="currency"),
-path("currencie/", views, name="currencies"),
+path("currencie/", views.list_currency, name="currencies"),
 
 path("registerloan/", register_loan, name="loan"),
-path("loans/", views, name="loans"),
+path("loans/", views.list_loan, name="loans"),
 
 path("registernotification/", register_notification, name="notification"),
-path("notifications/", views, name="notifications"),
+path("notifications/", views.list_notification, name="notifications"),
 
 path("registerreceipt/", register_receipt, name="receipt"),
-path("receipts/", views, name="receipts"),
+path("receipts/", views.list_receipt, name="receipts"),
 
 path("registerreward/", register_reward, name="reward"),
-path("rewards/", views, name="rewards"),
+path("rewards/", views.list_reward, name="rewards"),
 
 path("registerthirdparty/", register_third_party, name="thirdParty"),
-path("thirdparties/", views, name="thirdparties"),
+path("thirdparties/", views.list_third_party, name="thirdparties"),
 
 path("registertransaction/", register_transaction, name="transaction"),
-path("transactions/", views, name="transactions"),
+path("transactions/", views.list_transaction, name="transactions"),
 
 path("registerwallet/", register_wallet, name="wallet"),
-path("wallets/", views, name="wallets"),]
+path("wallets/", views.list_wallet, name="wallets"),]

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table style="
+          border:solid red 1px;
+          margin:10rem
+          ">
+        <th >
+        <td>Country</td>
+        <td>Symbol</td>
+        <td>Amount</td>
+        </th>
+         {%for currency in currencies%}
+         <tr >
+        <td> {{currency.country}}</td>
+        <td> {{currency.symbol}}</td>
+        <td> {{currency.amount}}</td>
+         </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

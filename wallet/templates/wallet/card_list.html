@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table style="
+          border:solid red 1px;
+          margin:10rem
+          ">
+        <th >
+        <td>Card Number</td>
+        <td>Card Type</td>
+        <td>Wallet</td>
+        <td>Account</td>
+        <td>Date of Issue</td>
+        <td>Expiry Date</td>
+        <td>Security Code</td>
+        </th>
+         {%for card in cards%}
+         <tr >
+        <td> {{card.card_number}}</td>
+        <td> {{card.card_type}}</td>
+        <td> {{card.wallet}}</td>
+        <td> {{card.account}}</td>
+        <td> {{card.date_of_issue}}</td>
+        <td> {{card.expiry_date}}</td>
+        <td> {{card.security_code}}</td>
+         </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

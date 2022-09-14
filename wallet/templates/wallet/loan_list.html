@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table style="
+          border:solid red 1px;
+          margin:10rem
+          ">
+        <th >
+        <td>Loan ID</td>
+        <td>Amount</td>
+        <td>Loan Type</td>
+        <td>Loan Balance</td>
+        <td>Wallet</td>
+        <td>Guaranter</td>
+        <td>Issuer</td>
+        </th>
+         {%for loan in loans%}
+         <tr >
+        <td> {{loan.loan_id}}</td>
+        <td> {{loan.amount}}</td>
+        <td> {{loan.loan_type}}</td>
+        <td> {{loan.loan_balance}}</td>
+        <td> {{loan.wallet}}</td>
+        <td> {{loan.guaranter}}</td>
+        <td> {{loan.issuer}}</td>
+         </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

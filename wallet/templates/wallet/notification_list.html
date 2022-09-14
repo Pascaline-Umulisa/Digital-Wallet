@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table style="
+          border:solid red 1px;
+          margin:10rem
+          ">
+        <th >
+        <td>Title</td>
+        <td>Message</td>
+        <td>Date</td>
+        <td>Recipient</td>
+        </th>
+         {%for notification in notifications%}
+         <tr >
+        <td> {{notification.title}}</td>
+        <td> {{notification.message}}</td>
+        <td> {{notification.date}}</td>
+        <td> {{notification.recipient}}</td>
+         </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
