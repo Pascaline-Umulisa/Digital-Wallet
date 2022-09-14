@@ -1,14 +1,14 @@
 from django.shortcuts import render
-from .forms import CustomerRegistrationForm, AccountRegistrationForm,WalletRegistrationForm,ThirdPartyRegistrationForm,TransactionRegistrationForm,ReceiptRegistrationForm,RewardRegistrationForm,CardRegistrationForm,CurrencyRegistrationForm,NotificationRegistrationForm,LoanRegistrationForm
+from . import views
 from . import models
 # Create your views here.
 def register_customer(request):
     if request.method == 'POST':
-        form=CustomerRegistrationForm(request.POST)
+        form=views.CustomerRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
     else:
-        form=CustomerRegistrationForm()
+        form=views.CustomerRegistrationForm()
     return render(request, 'wallet/register_customer.html',{'form':form})
 
 def list_customers(request):
@@ -19,11 +19,11 @@ def list_customers(request):
 
 def register_account(request):
     if request.method == 'POST':
-        form=AccountRegistrationForm(request.POST)
+        form=views.AccountRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
     else:
-        form=AccountRegistrationForm()
+        form=views.AccountRegistrationForm()
     return render(request,"wallet/register_account.html",{"form":form})
 
 def list_account(request):
@@ -34,11 +34,11 @@ def list_account(request):
 
 def register_wallet(request):
     if request.method == 'POST':
-        form=WalletRegistrationForm(request.POST)
+        form=views.WalletRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
     else:
-        form=WalletRegistrationForm()
+        form=views.WalletRegistrationForm()
     return render(request,"wallet/register_wallet.html",{"form":form})
 
 def list_wallet(request):
@@ -50,11 +50,11 @@ def list_wallet(request):
 
 def register_third_party(request):
     if request.method == 'POST':
-        form=ThirdPartyRegistrationForm(request.POST)
+        form=views.ThirdPartyRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
     else:
-        form=ThirdPartyRegistrationForm()
+        form=views.ThirdPartyRegistrationForm()
     return render(request,"wallet/register_third_party.html",{"form":form})
 
 def list_third_party(request):
@@ -66,11 +66,11 @@ def list_third_party(request):
 
 def register_transaction(request):
     if request.method == 'POST':
-        form=TransactionRegistrationForm(request.POST)
+        form=views.TransactionRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
     else:
-        form=TransactionRegistrationForm()
+        form=views.TransactionRegistrationForm()
     return render(request,"wallet/register_transaction.html",{"form":form})
     
 def list_transaction(request):
@@ -81,11 +81,11 @@ def list_transaction(request):
 
 def register_receipt(request):
     if request.method == 'POST':
-        form=ReceiptRegistrationForm(request.POST)
+        form=views.ReceiptRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
     else:
-        form=ReceiptRegistrationForm()
+        form=views.ReceiptRegistrationForm()
     return render(request,"wallet/register_receipt.html",{"form":form})
     
 def list_receipt(request):
@@ -97,11 +97,11 @@ def list_receipt(request):
 
 def register_reward(request):
     if request.method == 'POST':
-        form=RewardRegistrationForm(request.POST)
+        form=views.RewardRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
     else:
-        form=RewardRegistrationForm()
+        form=views.RewardRegistrationForm()
     return render(request,"wallet/register_reward.html",{"form":form})
     
 def list_reward(request):
@@ -113,11 +113,11 @@ def list_reward(request):
 
 def register_card(request):
     if request.method == 'POST':
-        form=CardRegistrationForm(request.POST)
+        form=views.CardRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
     else:
-        form=CardRegistrationForm()
+        form=views.CardRegistrationForm()
     return render(request,"wallet/register_card.html",{"form":form})
     
 def list_card(request):
@@ -129,11 +129,11 @@ def list_card(request):
 
 def register_currency(request):
     if request.method == 'POST':
-        form=CurrencyRegistrationForm(request.POST)
+        form=views.CurrencyRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
     else:
-        form=CurrencyRegistrationForm()
+        form=views.CurrencyRegistrationForm()
     return render(request,"wallet/register_currency.html",{"form":form})
     
 def list_currency(request):
@@ -145,11 +145,11 @@ def list_currency(request):
 
 def register_notification(request):
     if request.method == 'POST':
-        form=NotificationRegistrationForm(request.POST)
+        form=views.NotificationRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
     else:
-        form=NotificationRegistrationForm()
+        form=views.NotificationRegistrationForm()
     return render(request,"wallet/register_notification.html",{"form":form})
     
 def list_notification(request):
@@ -161,11 +161,11 @@ def list_notification(request):
 
 def register_loan(request):
     if request.method == 'POST':
-        form=LoanRegistrationForm(request.POST)
+        form=views.LoanRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
     else:
-        form=LoanRegistrationForm()
+        form=views.LoanRegistrationForm()
     return render(request,"wallet/register_loan.html",{"form":form})
     
 def list_loan(request):

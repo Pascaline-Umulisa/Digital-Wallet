@@ -1,58 +1,57 @@
 from dataclasses import field
 from django import forms
-from .models import Customer, Account,Wallet,ThirdParty,Transaction,Receipt,Reward,Card,Currency,Notification,Loan
-
+from . import models
 class CustomerRegistrationForm(forms.ModelForm):
     class Meta:
-        model=Customer
+        model=models.Customer
         fields="__all__"
 
 class AccountRegistrationForm(forms.ModelForm):
     class Meta:
-        model=Account
+        model=models.Account
         fields="__all__"
 
 class WalletRegistrationForm(forms.ModelForm):
     class Meta:
-        model=Wallet
+        model=models.Wallet
         fields="__all__"
 
 class ThirdPartyRegistrationForm(forms.ModelForm):
     class Meta:
-        model=ThirdParty
+        model=models.ThirdParty
         fields="__all__"
 
 class TransactionRegistrationForm(forms.ModelForm):
     class Meta:
-        model=Transaction
+        model=models.Transaction
         fields="__all__"
 
 class ReceiptRegistrationForm(forms.ModelForm):
     class Meta:
-        model=Receipt
+        model=models.Receipt
         fields="__all__"
 
 class RewardRegistrationForm(forms.ModelForm):
     class Meta:
-        model=Reward
+        model=models.Reward
         fields="__all__"
 
 class CardRegistrationForm(forms.ModelForm):
     class Meta:
-        model=Card
+        model=models.Card
         fields="__all__"
 
 class CurrencyRegistrationForm(forms.ModelForm):
     class Meta:
-        model=Currency
+        model=models.Currency
         fields="__all__"
 
 class NotificationRegistrationForm(forms.ModelForm):
     class Meta:
-        model=Notification
+        model=models.Notification
         fields="__all__"
 
 class LoanRegistrationForm(forms.ModelForm):
     class Meta:
-        model=Loan
+        model=models.Loan
         fields="__all__"
