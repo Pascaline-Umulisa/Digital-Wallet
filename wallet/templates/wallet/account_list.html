@@ -7,24 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    <table style="
-          border:solid red 1px;
-          margin:10rem
+    <h1 style="text-align: center; color: rgb(7, 69, 97);" >Accounts</h1>
+    <table class="table" style="
+          margin-left:auto;
+          margin-right: auto;
+          background-color: rgb(3, 66, 77)
           ">
-        <th >
-        <td>Account name</td>
-        <td>Account Number</td>
-        <td>Account Type</td>
-        <td>Wallet</td>
-        <td>Account Balance</td>
+     
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Account name</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Account Number</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Account Type</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Wallet</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Account Balance</td>
         </th>
          {%for account in accounts%}
          <tr >
-        <td> {{account.account_name}}</td>
-        <td> {{account.account_number}}</td>
-        <td> {{account.account_type}}</td>
-        <td> {{account.wallet}}</td>
-        <td> {{account.account_balance}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{account.account_name}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{account.account_number}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{account.account_type}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{account.wallet}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{account.account_balance}}</td>
          </tr>
     {% endfor %}
     </table>

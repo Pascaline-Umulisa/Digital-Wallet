@@ -7,28 +7,29 @@
     <title>Document</title>
 </head>
 <body>
-    <table style="
-          border:solid red 1px;
-          margin:10rem
+    <h1 style="text-align: center; color: rgb(7, 69, 97);" >Wallets</h1>
+    <table class="table" style="
+          margin-left:auto;
+          margin-right: auto;
+          background-color: rgb(3, 66, 77)
           ">
-        <th >
-        <td>Customer</td>
-        <td>Balance</td>
-        <td>Status</td>
-        <td>Currency</td>
-        <td>Date Created</td>
-        <td>History</td>
-        <td>Pin</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Customer</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Balance</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Status</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Currency</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Date Created</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">History</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Pin</td>
         </th>
          {%for wallet in wallets%}
          <tr >
-        <td> {{wallet.customer}}</td>
-        <td> {{wallet.balance}}</td>
-        <td> {{wallet.status}}</td>
-        <td> {{wallet.currency}}</td>
-        <td> {{wallet.date_created}}</td>
-        <td> {{wallet.history}}</td>
-        <td> {{wallet.pin}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{wallet.customer}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{wallet.balance}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{wallet.status}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{wallet.currency}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{wallet.date_created}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{wallet.history}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{wallet.pin}}</td>
          </tr>
     {% endfor %}
     </table>

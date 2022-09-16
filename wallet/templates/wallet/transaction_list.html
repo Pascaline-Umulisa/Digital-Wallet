@@ -7,30 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-    <table style="
-          border:solid red 1px;
-          margin:10rem
+    <h1 style="text-align: center; color: rgb(7, 69, 97);" >Transactions</h1>
+    <table class="table" style="
+          margin-left:auto;
+          margin-right: auto;
+          background-color: rgb(3, 66, 77)
           ">
-        <th >
-        <td>Wallet</td>
-        <td>Transaction Amount</td>
-        <td>Transaction Description</td>
-        <td>Message</td>
-        <td>Transaction Charge</td>
-        <td>Transaction Type</td>
-        <td>Origin Account</td>
-        <td>Destination Account</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Wallet</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Transaction Amount</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Transaction Description</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Message</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Transaction Charge</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Transaction Type</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Origin Account</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Destination Account</td>
         </th>
          {%for transaction in transactions%}
          <tr >
-        <td> {{transaction.wallet}}</td>
-        <td> {{transaction.transaction_amount}}</td>
-        <td> {{transaction.transaction_description}}</td>
-        <td> {{transaction.message}}</td>
-        <td> {{transaction.transaction_charge}}</td>
-        <td> {{transaction.transaction_type}}</td>
-        <td> {{transaction.origin_account}}</td>
-        <td> {{transaction.destination_account}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{transaction.wallet}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{transaction.transaction_amount}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{transaction.transaction_description}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{transaction.message}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{transaction.transaction_charge}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{transaction.transaction_type}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{transaction.origin_account}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{transaction.destination_account}}</td>
          </tr>
     {% endfor %}
     </table>

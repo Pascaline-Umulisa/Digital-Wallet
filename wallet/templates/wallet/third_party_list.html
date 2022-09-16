@@ -7,26 +7,27 @@
     <title>Document</title>
 </head>
 <body>
-    <table style="
-          border:solid red 1px;
-          margin:10rem
+    <h1 style="text-align: center; color: rgb(7, 69, 97);" >Third Parties</h1>
+    <table class="table" style="
+          margin-left:auto;
+          margin-right: auto;
+          background-color: rgb(3, 66, 77)
           ">
-        <th >
-        <td>Account</td>
-        <td>Transaction Amount</td>
-        <td>Currency</td>
-        <td>Wallet</td>
-        <td>Date of Issue</td>
-        <td>Issuer</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Account</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Transaction Amount</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Currency</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Wallet</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Date of Issue</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Issuer</td>
         </th>
          {%for third_party in third_parties%}
          <tr >
-        <td> {{third_party.account}}</td>
-        <td> {{third_party.transaction_amount}}</td>
-        <td> {{third_party.currency}}</td>
-        <td> {{third_party.wallet}}</td>
-        <td> {{third_party.date_of_issue}}</td>
-        <td> {{third_party.issuer}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{third_party.account}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{third_party.transaction_amount}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{third_party.currency}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{third_party.wallet}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{third_party.date_of_issue}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{third_party.issuer}}</td>
          </tr>
     {% endfor %}
     </table>

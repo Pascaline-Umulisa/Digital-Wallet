@@ -7,28 +7,29 @@
     <title>Document</title>
 </head>
 <body>
-    <table style="
-          border:solid red 1px;
-          margin:10rem
+    <h1 style="text-align: center; color: rgb(7, 69, 97);" >Loans</h1>
+    <table class="table" style="
+          margin-left:auto;
+          margin-right: auto;
+          background-color: rgb(3, 66, 77)
           ">
-        <th >
-        <td>Loan ID</td>
-        <td>Amount</td>
-        <td>Loan Type</td>
-        <td>Loan Balance</td>
-        <td>Wallet</td>
-        <td>Guaranter</td>
-        <td>Issuer</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Loan ID</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Amount</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Loan Type</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Loan Balance</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Wallet</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Guaranter</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Issuer</td>
         </th>
          {%for loan in loans%}
          <tr >
-        <td> {{loan.loan_id}}</td>
-        <td> {{loan.amount}}</td>
-        <td> {{loan.loan_type}}</td>
-        <td> {{loan.loan_balance}}</td>
-        <td> {{loan.wallet}}</td>
-        <td> {{loan.guaranter}}</td>
-        <td> {{loan.issuer}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{loan.loan_id}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{loan.amount}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{loan.loan_type}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{loan.loan_balance}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{loan.wallet}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{loan.guaranter}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{loan.issuer}}</td>
          </tr>
     {% endfor %}
     </table>

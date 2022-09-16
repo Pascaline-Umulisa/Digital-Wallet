@@ -7,24 +7,27 @@
     <title>Document</title>
 </head>
 <body>
-    <table style="
-          border:solid red 1px;
-          margin:10rem
+    <h1 style="text-align: center; color: rgb(7, 69, 97);" >Receipts</h1>
+    <table class="table" style="
+          background-color: rgb(3, 66, 77);
+          margin-left:auto;
+          margin-right: auto;
+
           ">
         <th >
-        <td>Receipt Type</td>
-        <td>Transaction </td>
-        <td>Receipt Number</td>
-        <td>Date</td>
-        <td>Receipt File</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Receipt Type</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Transaction </td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Receipt Number</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Date</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Receipt File</td>
         </th>
          {%for receipt in receipts%}
          <tr >
-        <td> {{receipt.receipt_type}}</td>
-        <td> {{receipt.transaction}}</td>
-        <td> {{receipt.receipt_number}}</td>
-        <td> {{receipt.date}}</td>
-        <td> {{receipt.receipt_file}}</td>         </tr>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{receipt.receipt_type}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{receipt.transaction}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{receipt.receipt_number}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{receipt.date}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{receipt.receipt_file}}</td>         </tr>
     {% endfor %}
     </table>
 </body>

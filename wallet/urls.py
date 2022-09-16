@@ -12,7 +12,7 @@ path("registercard/", views.register_card, name="card"),
 path("cards/", views.list_card, name="cards"),
 
 path("registercurrency/", views.register_currency, name="currency"),
-path("currencie/", views.list_currency, name="currencies"),
+path("currencies/", views.list_currency, name="currencies"),
 
 path("registerloan/", views.register_loan, name="loan"),
 path("loans/", views.list_loan, name="loans"),
