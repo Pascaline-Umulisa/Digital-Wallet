@@ -1,0 +1,5 @@
+<h1>{{wallet.balance}} {{wallet.currency}}</h1>
+<h2>{{wallet.customer}}</h2>
+<h3>{{wallet.date_created}}</h3>
+<h4>{{wallet.status}}</h4>
+<a href="{% url 'edit_wallet' id=wallet.id %}"> Edit </a>
