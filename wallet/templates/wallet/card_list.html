@@ -20,6 +20,8 @@
         <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Date of Issue</td>
         <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Expiry Date</td>
         <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Security Code</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Profile</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Editing</td>
         </th>
          {%for card in cards%}
          <tr >
@@ -30,6 +32,8 @@
         <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{card.date_of_issue}}</td>
         <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{card.expiry_date}}</td>
         <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{card.security_code}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> <a href="{%url 'card_profile' id=card.id %}">Profile</a </td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> <a href="{%url 'edit_card' id=card.id %}">Edit</a </td>
          </tr>
     {% endfor %}
     </table>

@@ -1,6 +1,5 @@
-<h1>{{customer.first_name}} {{customer.last_name}}</h1>
-<img src="{{customer.profile_picture}}" alt="Profile Picture" />
-<h2>{{customer.email}}</h2>
-<h3>{{customer.age}}</h3>
-<h4>{{customer.address}}</h4>
-<a href="{% url 'edit_customer' id=customer.id %}"> Edit </a>
+<h1>{{account.account_name}}  {{account.account_number}}</h1>
+<h2>{{account.account_type}}</h2>
+<h3>{{account.account_balance}}</h3>
+<h2>{{account.wallet}}</h2>
+<a href="{% url 'edit_account' id=account.id %}"> Edit </a>

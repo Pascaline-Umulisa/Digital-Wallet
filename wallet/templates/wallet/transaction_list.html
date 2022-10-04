@@ -21,6 +21,8 @@
         <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Transaction Type</td>
         <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Origin Account</td>
         <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Destination Account</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Profile</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Editing</td>
         </th>
          {%for transaction in transactions%}
          <tr >
@@ -32,6 +34,8 @@
         <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{transaction.transaction_type}}</td>
         <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{transaction.origin_account}}</td>
         <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{transaction.destination_account}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> <a href="{%url 'transaction_profile' id=transaction.id %}">Profile</a </td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> <a href="{%url 'edit_transaction' id=transaction.id %}">Edit</a </td>
          </tr>
     {% endfor %}
     </table>

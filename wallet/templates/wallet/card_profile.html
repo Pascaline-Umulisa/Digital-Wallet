@@ -1,6 +1,9 @@
-<h1>{{customer.first_name}} {{customer.last_name}}</h1>
-<img src="{{customer.profile_picture}}" alt="Profile Picture" />
-<h2>{{customer.email}}</h2>
-<h3>{{customer.age}}</h3>
-<h4>{{customer.address}}</h4>
-<a href="{% url 'edit_customer' id=customer.id %}"> Edit </a>
+<h1>{{card.card_number}} {{card.card_type}}</h1>
+<h2>{{card.date_of_issue}}</h2>
+<h2>{{card.expiry_date}}</h2>
+<h3>{{card.security_code}}</h3>
+<h2>{{card.wallet}}</h2>
+<h2>{{card.account}}</h2>
+<h2>{{card.issuer}}</h2>
+
+<a href="{% url 'edit_card' id=card.id %}"> Edit </a>

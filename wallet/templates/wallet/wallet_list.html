@@ -20,6 +20,8 @@
         <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Date Created</td>
         <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">History</td>
         <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Pin</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Profile</td>
+        <td style="color: white; padding: 0.5rem; font-size: 20px; text-align: center; background-color: rgb(23, 136, 156)">Editing</td>
         </th>
          {%for wallet in wallets%}
          <tr >
@@ -30,6 +32,8 @@
         <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{wallet.date_created}}</td>
         <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{wallet.history}}</td>
         <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> {{wallet.pin}}</td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> <a href="{%url 'wallet_profile' id=wallet.id %}">Profile</a </td>
+        <td style="color: rgb(4, 39, 59); padding: 0.7rem; font-size: 15px; text-align: center; background-color: rgb(231, 240, 241)"> <a href="{%url 'edit_wallet' id=wallet.id %}">Edit</a </td>
          </tr>
     {% endfor %}
     </table>
