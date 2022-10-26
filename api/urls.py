@@ -14,5 +14,8 @@ router.register('notifications', views.NotificationViewSet)
 
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    path("deposit/", views.AccountDepositView.as_view(), name="deposit-view"),
+    path("transfer/", views.AccountTransferView.as_view(), name="transfer-view"),
+    path("withdraw/", views.AccountWithdrawView.as_view(), name="withdraw-view"),
 ]

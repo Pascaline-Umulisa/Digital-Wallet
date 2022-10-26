@@ -1,3 +1,4 @@
+from email import message
 from django.db import models
 # Create your models here.
 class Customer(models.Model):
@@ -31,6 +32,50 @@ class Account(models.Model):
     account_type = models.CharField(max_length=20)
     account_balance = models.IntegerField()
     wallet = models.ForeignKey("Wallet",on_delete=models.CASCADE,related_name='Account_wallet')
+    
+    def deposit(self, amount):
+       if amount <= 0:
+           message =  "Invalid amount"
+           status = 403
+       else:
+           self.account_balance += amount
+           self.save()
+           message = f"You have deposited {amount}, your new balance is {self.account_balance}"
+           status = 200
+       return message, status
+   
+    def transfer(self, destination, amount):
+       if amount <= 0:
+           message =  "Invalid amount"
+           status = 403
+      
+       elif amount < self.account_balance:
+           message =  "Insufficient balance"
+           status = 403
+      
+       else:
+           self.account_balance -= amount
+           self.save()
+           destination.deposit(amount)
+          
+           message = f"You have transfered {amount}, your new balance is {self.account_balance}"
+           status = 200
+       return message, status
+   
+    def withdraw(self,amount):
+        transaction_fees=100
+        withrawable_amount=self.account_balance-transaction_fees
+        
+        if amount>withrawable_amount:
+            message= "insufficient funds"
+            return message
+
+        else:
+            self.account_balance-=amount + transaction_fees
+            message= f"You withdrew {amount} KSH on the account {self.account_number} in the name of {self.account_name}. The balance is {self.account_balance} KSH"
+            return message
+   
+   
 
 class Transaction(models.Model):
     message = models.CharField(max_length=100)
